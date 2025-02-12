@@ -21,7 +21,7 @@ jobs:
    - name: Authenticate with Salesforce
      run: |
       echo ${{secrets.SALESFORCE_AUTH_URL}} > sfdx-auth-url.txt
-      sf org login sfdx-url --sfdx-auth-url-file sfdx-auth-url.txt --alias DevHub --set-default
+      sf org login sfdx-url --sfdx-url-file sfdx-auth-url.txt --alias DevHub --set-default
 
    - name: Deploy to Salesforce
      run: |
